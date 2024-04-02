@@ -1,0 +1,10 @@
+[
+  {
+    "name": "Successful login",
+    "data": [{ "email": "qamid@qamid.ru", "password": "qamid" }]
+  },
+  {
+    "name": "Unsuccessful login",
+    "data": [{ "email": "qwerty@qamid.ru", "password": "123" }]
+  }
+]
