@@ -1,0 +1,15 @@
+[
+  {
+    "name": "Some seats",
+    "data": [
+      { "row": 2, "seat": 5 },
+      { "row": 2, "seat": 6 },
+      { "row": 7, "seat": 1 },
+      { "row": 5, "seat": 8 }
+    ]
+  },
+  {
+    "name": "One seat",
+    "data": [{ "row": 1, "seat": 1 }]
+  }
+]
