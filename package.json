@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test:login": "npx cypress run --record --key 4001b063-0912-4d2a-8730-c637262cc2c7 --spec \"cypress/e2e/login.cy.js\" --group login --ci-build-id 5",
+    "test:tickets": "npx cypress run --record --key 4001b063-0912-4d2a-8730-c637262cc2c7 --spec \"cypress/e2e/tickets.cy.js\" --group tickets --ci-build-id 5",
+    "test:parallel": "run-p -c test:login test:tickets"
   },
   "author": "",
   "license": "ISC",
