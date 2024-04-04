@@ -4,9 +4,16 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test:login": "npx cypress run --record --key 4001b063-0912-4d2a-8730-c637262cc2c7 --spec \"cypress/e2e/login.cy.js\" --group login --ci-build-id 5",
-    "test:tickets": "npx cypress run --record --key 4001b063-0912-4d2a-8730-c637262cc2c7 --spec \"cypress/e2e/tickets.cy.js\" --group tickets --ci-build-id 5",
-    "test:parallel": "run-p -c test:login test:tickets"
+    "test:login:chrome": "npx cypress run --record --spec \"cypress/e2e/login.cy.js\" --group login:chrome --browser chrome",
+    "test:tickets:chrome": "npx cypress run --record --spec \"cypress/e2e/tickets.cy.js\" --group tickets:chrome --browser chrome",
+    "test:parallel:chrome": "run-p -c test:login:chrome test:tickets:chrome",
+    "test:login:edge": "npx cypress run --record --spec \"cypress/e2e/login.cy.js\" --group login:edge --browser edge",
+    "test:tickets:edge": "npx cypress run --record --spec \"cypress/e2e/tickets.cy.js\" --group tickets:edge --browser edge",
+    "test:parallel:edge": "run-p -c test:login:edge test:tickets:edge",
+    "test:login:electron": "npx cypress run --record --spec \"cypress/e2e/login.cy.js\" --group login:electron --browser electron",
+    "test:tickets:electron": "npx cypress run --record --spec \"cypress/e2e/tickets.cy.js\" --group tickets:electron --browser electron",
+    "test:parallel:electron": "run-p -c test:login:electron test:tickets:electron",
+    "test:parallel:all": "run-p -c test:parallel:chrome test:parallel:edge test:parallel:electron"
   },
   "author": "",
   "license": "ISC",
